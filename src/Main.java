@@ -8,7 +8,7 @@ public class Main {
         System.setProperty("webdriver.chrome.driver", "/home/pedro/IdeaProjects/chromedriver");
         WebDriver driver;
 
-        // Start Driver and actions initialization in headless mode
+        // Start Driver and actions initialization (headless mode with fallback to normal mode or simply normal mode)
         if (args.length > 0 && args[0].equals("headless")) {
             try {
                 driver = new ChromeDriver(new ChromeOptions().addArguments("--headless"));
